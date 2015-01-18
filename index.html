@@ -11,6 +11,12 @@
   <body data-ng-app="uiApp">
     <section data-ng-controller="uiCtrl">
       <h1>{{title}}</h1>
+      <!-- directive referenced using attribute -->
+      <div data-my-lightbox></div>
+      <!-- directive referenced using element -->
+      <my-lightbox></my-lightbox>
+      <!-- directive referenced using class -->
+      <div class="my-lightbox"></div>
     </section>
   </body>
 </html>
