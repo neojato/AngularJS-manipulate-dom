@@ -1,0 +1,1 @@
+var myApp = angular.module('uiApp', ['ui.module']);
