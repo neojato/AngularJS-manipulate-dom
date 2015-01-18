@@ -9,4 +9,12 @@ angular.module('ui.directives', [])
       },
       templateUrl: 'scripts/directives/templates/lightbox.html'
     };
+  })
+  .directive('myAccordion', function() {
+    'use strict';
+    return {
+      restrict: 'AEC',
+      transclude: true,
+      template: '<div class="accordion" data-ng-transclude></div>'
+    };
   });
