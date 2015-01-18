@@ -43,6 +43,7 @@ angular.module('ui.directives', [])
             scope.open = true;
           }
         };
+        parentCtrl.addItem(scope);
       },
       template: '<h2 data-ng-click="toggle()">{{title}}</h2><div class="accordionContent" data-ng-transclude data-ng-show="open"></div>'
     };
