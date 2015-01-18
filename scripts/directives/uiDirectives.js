@@ -35,7 +35,15 @@ angular.module('ui.directives', [])
       },
       link: function(scope, element, attrs, parentCtrl) {
         // code here will run when the directive is called
+        scope.open = false;
+        scope.toggle = function() {
+          if(scope.open) {
+            scope.open = false;
+          } else {
+            scope.open = true;
+          }
+        };
       },
-      template: '<h2>{{title}}</h2><div class="accordionContent" data-ng-transclude></div>'
+      template: '<h2 data-ng-click="toggle()">{{title}}</h2><div class="accordionContent" data-ng-transclude data-ng-show="open"></div>'
     };
   });
