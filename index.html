@@ -15,7 +15,10 @@
     <section data-ng-controller="uiCtrl">
       <h1>{{title}}</h1>
       <!-- directive referenced using attribute -->
-      <div data-my-lightbox data-my-content="lightboxObject"></div>
+      <div data-my-lightbox data-my-content="lightboxObject">
+        <h2>The title of my lightbox</h2>
+        <p>{{lightboxObject.text}}</p>
+      </div>
       <button data-ng-click="lightboxObject.toggleView()">Show lightbox</button>
     </section>
   </body>
