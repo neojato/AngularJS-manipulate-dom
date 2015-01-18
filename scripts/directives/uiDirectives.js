@@ -15,6 +15,12 @@ angular.module('ui.directives', [])
     return {
       restrict: 'AEC',
       transclude: true,
-      template: '<div class="accordion" data-ng-transclude></div>'
+      template: '<div class="accordion" data-ng-transclude></div>',
+      controller: function($scope, $element) {
+        this.items = [];
+        this.addItem = function(item) {
+          this.items.push(item);
+        };
+      }
     };
   });
