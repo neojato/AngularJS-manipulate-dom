@@ -1,1 +1,1 @@
-var myApp = angular.module('uiApp', ['ui.module']);
+var myApp = angular.module('uiApp', ['ui.module', 'ui.directives']);
