@@ -4,8 +4,8 @@ angular.module('ui.directives', [])
     return {
       restrict: 'AEC',
       scope: {
-        contentText: '=myContent'
+        content: '=myContent'
       },
-      template: '<div class="lightbox"><p>{{contentText}}</p></div>'
+      template: '<div class="lightbox"><p>{{content.text}}</p><button data-ng-click="content.testFunc()">click me</button</div>'
     };
   });
