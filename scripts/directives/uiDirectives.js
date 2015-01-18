@@ -21,6 +21,11 @@ angular.module('ui.directives', [])
         this.addItem = function(item) {
           this.items.push(item);
         };
+        this.closeAll = function() {
+          angular.forEach(this.items, function(item) {
+            item.closeMe();
+          })
+        };
       }
     };
   })
@@ -36,10 +41,14 @@ angular.module('ui.directives', [])
       link: function(scope, element, attrs, parentCtrl) {
         // code here will run when the directive is called
         scope.open = false;
+        scope.closeMe = function() {
+          scope.open = false;
+        };
         scope.toggle = function() {
           if(scope.open) {
-            scope.open = false;
+            scope.closeMe();
           } else {
+            parentCtrl.closeAll();
             scope.open = true;
           }
         };
