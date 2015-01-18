@@ -23,4 +23,16 @@ angular.module('ui.directives', [])
         };
       }
     };
+  })
+  .directive('myItem', function() {
+    'use strict';
+    return {
+      restrict: 'AEC',
+      require: '^myAccordion',
+      transclude: true,
+      link: function(scope, element, attrs, parentCtrl) {
+        // code here will run when the directive is called
+      },
+      template: '<div class="accordianContent" data-ng-transclude></div>'
+    };
   });
