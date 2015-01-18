@@ -30,9 +30,12 @@ angular.module('ui.directives', [])
       restrict: 'AEC',
       require: '^myAccordion',
       transclude: true,
+      scope: {
+        title: '@'
+      },
       link: function(scope, element, attrs, parentCtrl) {
         // code here will run when the directive is called
       },
-      template: '<div class="accordianContent" data-ng-transclude></div>'
+      template: '<h2>{{title}}</h2><div class="accordionContent" data-ng-transclude></div>'
     };
   });
