@@ -3,6 +3,9 @@ angular.module('ui.directives', [])
     'use strict';
     return {
       restrict: 'AEC',
-      template: '<div class="lightbox"><p>{{lightboxText}}</p></div>'
+      scope: {
+        contentText: '=myContent'
+      },
+      template: '<div class="lightbox"><p>{{contentText}}</p></div>'
     };
   });

@@ -3,4 +3,5 @@ angular.module('ui.module', [])
     'use strict';
     $scope.title = 'DOM manipulation with AngularJS';
     $scope.lightboxText = 'Some text that should be displayed in a lightbox';
+    $scope.lightboxText2 = 'Some different text that should be in another lightbox';
   }]);
