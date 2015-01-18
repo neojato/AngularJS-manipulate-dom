@@ -6,6 +6,6 @@ angular.module('ui.directives', [])
       scope: {
         content: '=myContent'
       },
-      template: '<div class="lightbox"><p>{{content.text}}</p><button data-ng-click="content.testFunc()">click me</button</div>'
+      template: '<div class="background" data-ng-show="content.visible"></div><div class="lightbox" data-ng-show="content.visible"><button data-ng-click="content.toggleView()">close</button><p>{{content.text}}</p></div>'
     };
   });
